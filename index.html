@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOUR_WISH - Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>YOUR_WISH</h1>
+    <h3 class="tagline">~ Good Food. Great Mood. ~</h3>
+
+    <div class="links">
+        <a href="#menu">Menu</a> |
+        <a href="#order">Order Now</a>
+    </div>
+
+    <hr>
+
+    <p class="info">
+        We deliver fresh food to your home!!<br>
+        Orders above Rs.499 = FREE delivery. Below that, delivery is Rs.30.
+    </p>
+
+    <h2 id="menu">Menu</h2>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>🥪 Sandwich</td>
+            <td>₹100</td>
+        </tr>
+        <tr>
+            <td>🍔 Burger</td>
+            <td>₹180</td>
+        </tr>
+        <tr>
+            <td>🍟 French Fries</td>
+            <td>₹180</td>
+        </tr>
+        <tr>
+            <td>🍨 Ice Cream</td>
+            <td>₹150</td>
+        </tr>
+    </table>
+
+    <h2 id="order">Order Form</h2>
+
+    <form id="orderForm">
+        <fieldset>
+            <legend>Your details</legend>
+
+            Name: <br>
+            <input type="text" id="customerName"><br><br>
+
+            Phone: <br>
+            <input type="text" id="phone"><br><br>
+
+            Address: <br>
+            <textarea id="address" rows="3" cols="30"></textarea>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Your order</legend>
+
+            Food: <br>
+            <select id="foodItem" onchange="calculate()">
+                <option value="none">-- select --</option>
+                <option value="sandwich">Sandwich</option>
+                <option value="burger">Burger</option>
+                <option value="fries">French Fries</option>
+                <option value="icecream">Ice Cream</option>
+            </select>
+            <br><br>
+
+            Quantity: <br>
+            <input type="number" id="quantity" value="1" min="1" onchange="calculate()">
+            <br><br>
+
+            <p>Subtotal: ₹<span id="subtotal">0</span></p>
+            <p>Delivery: ₹<span id="delivery">0</span></p>
+            <p><b>Total: ₹<span id="total">0</span></b></p>
+        </fieldset>
+
+        <br>
+        <button type="button" onclick="placeOrder()">PLACE ORDER</button>
+    </form>
+
+    <p id="message"></p>
+
+    <hr>
+    <script src="script.js"></script>
+</body>
+</html>

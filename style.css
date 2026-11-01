@@ -1,0 +1,102 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #3a1c5a;
+    color: #fff3d6;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff9f1c;
+    font-size: 45px;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #c6ff4d;
+    border-bottom: 2px dotted #c6ff4d;
+}
+
+.tagline {
+    text-align: center;
+    color: #ffd6f6;
+    margin-top: 5px;
+}
+
+.links {
+    text-align: center;
+    font-size: 18px;
+}
+
+.links a {
+    color: #ff9f1c;
+    font-weight: bold;
+}
+
+.info {
+    background-color: #ff9f1c;
+    color: #3a1c5a;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: #c6ff4d;
+    color: #3a1c5a;
+    padding: 8px;
+}
+
+td {
+    border: 1px solid #ff9f1c;
+    padding: 8px;
+}
+
+fieldset {
+    border: 2px dashed #ff9f1c;
+    padding: 12px;
+}
+
+legend {
+    color: #c6ff4d;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    background-color: #fff3d6;
+    border: 2px solid #c6ff4d;
+    padding: 4px;
+    font-family: Verdana;
+}
+
+button {
+    background-color: #ff9f1c;
+    color: #3a1c5a;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 25px;
+    border: 3px solid #c6ff4d;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c6ff4d;
+}
+
+#message {
+    color: #c6ff4d;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+}
