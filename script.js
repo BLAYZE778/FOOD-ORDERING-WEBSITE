@@ -24,7 +24,7 @@ function calculate() {
     if (subtotal == 0) {
         delivery = 0;
     } else if (subtotal > 499) {
-        delivery = 0;   // free delivery
+        delivery = 0; 
     } else {
         delivery = 30;
     }
