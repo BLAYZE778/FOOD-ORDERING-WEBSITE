@@ -1,6 +1,6 @@
 body {
     font-family: Verdana, sans-serif;
-    background-color: #3a1c5a;
+    background-color: #0ff1e2;
     color: #fff3d6;
     width: 600px;
     margin: 0 auto;
@@ -9,19 +9,19 @@ body {
 
 h1 {
     text-align: center;
-    color: #ff9f1c;
+    color: #29060d;
     font-size: 45px;
     margin-bottom: 0;
 }
 
 h2 {
-    color: #c6ff4d;
-    border-bottom: 2px dotted #c6ff4d;
+    color: #07efcc;
+    border-bottom: 2px dotted #202b0a;
 }
 
 .tagline {
     text-align: center;
-    color: #ffd6f6;
+    color: #ec2409;
     margin-top: 5px;
 }
 
@@ -31,13 +31,13 @@ h2 {
 }
 
 .links a {
-    color: #ff9f1c;
+    color: #f44f08;
     font-weight: bold;
 }
 
 .info {
     background-color: #ff9f1c;
-    color: #3a1c5a;
+    color: #0df8f8;
     padding: 10px;
     text-align: center;
     font-weight: bold;
@@ -49,8 +49,8 @@ table {
 }
 
 th {
-    background-color: #c6ff4d;
-    color: #3a1c5a;
+    background-color: #11d0f6;
+    color: #0dddf5;
     padding: 8px;
 }
 
@@ -77,8 +77,8 @@ input, select, textarea {
 }
 
 button {
-    background-color: #ff9f1c;
-    color: #3a1c5a;
+    background-color: #08dfea;
+    color: #0bc2e2;
     font-weight: bold;
     font-size: 16px;
     padding: 10px 25px;
@@ -87,11 +87,11 @@ button {
 }
 
 button:hover {
-    background-color: #c6ff4d;
+    background-color: #0df996;
 }
 
 #message {
-    color: #c6ff4d;
+    color: #12e779;
     font-weight: bold;
     font-size: 18px;
 }
