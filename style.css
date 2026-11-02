@@ -1,6 +1,6 @@
 body {
     font-family: Verdana, sans-serif;
-    background-color: #0ff1e2;
+    background-color: #9ac1b9;
     color: #fff3d6;
     width: 600px;
     margin: 0 auto;
@@ -37,7 +37,7 @@ h2 {
 
 .info {
     background-color: #ff9f1c;
-    color: #0df8f8;
+    color: #f8150d;
     padding: 10px;
     text-align: center;
     font-weight: bold;
@@ -49,8 +49,8 @@ table {
 }
 
 th {
-    background-color: #11d0f6;
-    color: #0dddf5;
+    background-color: #52f8aa;
+    color: #031717;
     padding: 8px;
 }
 
@@ -65,13 +65,13 @@ fieldset {
 }
 
 legend {
-    color: #c6ff4d;
+    color: #3759f1;
     font-weight: bold;
 }
 
 input, select, textarea {
-    background-color: #fff3d6;
-    border: 2px solid #c6ff4d;
+    background-color: #c6fa1b;
+    border: 2px solid #2c36f9;
     padding: 4px;
     font-family: Verdana;
 }
