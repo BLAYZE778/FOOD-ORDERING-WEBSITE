@@ -1,98 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>YOUR_WISH - Food Delivery</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YOUR_WISH | Food delivery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>YOUR_WISH</h1>
-    <h3 class="tagline">~ Good Food. Great Mood. ~</h3>
+<header class="topbar">
+  <a href="#top" class="logo">YOUR_WISH</a>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#how">How it works</a>
+    <a href="#checkout">Checkout</a>
+  </nav>
+  <button class="cart-btn" id="openCart" aria-label="Open cart">
+    Cart <span id="cartCount">0</span>
+  </button>
+</header>
 
-    <div class="links">
-        <a href="#menu">Menu</a> |
-        <a href="#order">Order Now</a>
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hungry? Tell us what you wish for.</h1>
+      <p>Hot burgers, crispy fries and cold desserts at your door in about 30 minutes.</p>
+      <a href="#menu" class="btn">Order now</a>
+      <p class="fee-note">Free delivery above ₹499. Otherwise ₹30.</p>
     </div>
+    <div class="plate" aria-hidden="true">
+      <span class="e e1">🍔</span>
+      <span class="e e2">🍟</span>
+      <span class="e e3">🍕</span>
+      <span class="e e4">🍨</span>
+      <span class="e e5">🥪</span>
+    </div>
+  </section>
 
-    <hr>
+  <section id="menu" class="section">
+    <h2>Menu</h2>
+    <div class="filters" id="filters">
+      <button class="chip active" data-cat="all">All</button>
+      <button class="chip" data-cat="Mains">Mains</button>
+      <button class="chip" data-cat="Sides">Sides</button>
+      <button class="chip" data-cat="Desserts">Desserts</button>
+      <button class="chip" data-cat="Drinks">Drinks</button>
+    </div>
+    <div class="grid" id="menuGrid"></div>
+  </section>
 
-    <p class="info">
-        We deliver fresh food to your home!!<br>
-        Orders above Rs.499 = FREE delivery. Below that, delivery is Rs.30.
-    </p>
+  <section id="how" class="section steps">
+    <h2>How it works</h2>
+    <ol>
+      <li><b>Pick your food.</b> Add items to your cart from the menu.</li>
+      <li><b>Enter your address.</b> We only need your name, phone and where to deliver.</li>
+      <li><b>Relax.</b> Your order is on its way as soon as you confirm.</li>
+    </ol>
+  </section>
 
-    <h2 id="menu">Menu</h2>
-
-    <table>
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>🥪 Sandwich</td>
-            <td>₹100</td>
-        </tr>
-        <tr>
-            <td>🍔 Burger</td>
-            <td>₹180</td>
-        </tr>
-        <tr>
-            <td>🍟 French Fries</td>
-            <td>₹180</td>
-        </tr>
-        <tr>
-            <td>🍨 Ice Cream</td>
-            <td>₹150</td>
-        </tr>
-    </table>
-
-    <h2 id="order">Order Form</h2>
-
-    <form id="orderForm">
-        <fieldset>
-            <legend>Your details</legend>
-
-            Name: <br>
-            <input type="text" id="customerName"><br><br>
-
-            Phone: <br>
-            <input type="text" id="phone"><br><br>
-
-            Address: <br>
-            <textarea id="address" rows="3" cols="30"></textarea>
-        </fieldset>
-
-        <br>
-
-        <fieldset>
-            <legend>Your order</legend>
-
-            Food: <br>
-            <select id="foodItem" onchange="calculate()">
-                <option value="none">-- select --</option>
-                <option value="sandwich">Sandwich</option>
-                <option value="burger">Burger</option>
-                <option value="fries">French Fries</option>
-                <option value="icecream">Ice Cream</option>
-            </select>
-            <br><br>
-
-            Quantity: <br>
-            <input type="number" id="quantity" value="1" min="1" onchange="calculate()">
-            <br><br>
-
-            <p>Subtotal: ₹<span id="subtotal">0</span></p>
-            <p>Delivery: ₹<span id="delivery">0</span></p>
-            <p><b>Total: ₹<span id="total">0</span></b></p>
-        </fieldset>
-
-        <br>
-        <button type="button" onclick="placeOrder()">PLACE ORDER</button>
+  <section id="checkout" class="section">
+    <h2>Checkout</h2>
+    <form id="orderForm" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" autocomplete="name">
+        <small class="err"></small>
+      </div>
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input id="phone" type="tel" inputmode="numeric" placeholder="10 digits">
+        <small class="err"></small>
+      </div>
+      <div class="field full">
+        <label for="address">Delivery address</label>
+        <textarea id="address" rows="3"></textarea>
+        <small class="err"></small>
+      </div>
+      <div class="field full">
+        <label>Payment</label>
+        <div class="pay">
+          <label><input type="radio" name="pay" value="Cash on delivery" checked> Cash on delivery</label>
+          <label><input type="radio" name="pay" value="UPI"> UPI</label>
+          <label><input type="radio" name="pay" value="Card"> Card</label>
+        </div>
+      </div>
+      <div class="field full summary" id="summaryBox"></div>
+      <button type="submit" class="btn full">Place order</button>
     </form>
+  </section>
+</main>
 
-    <p id="message"></p>
+<footer>YOUR_WISH. Made with care in Delhi.</footer>
 
-    <hr>
-    <script src="script.js"></script>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Your cart">
+  <div class="drawer-head">
+    <h3>Your cart</h3>
+    <button id="closeCart" aria-label="Close cart">✕</button>
+  </div>
+  <div class="progress"><div id="bar"></div></div>
+  <p id="progressText" class="progress-text"></p>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="drawer-foot">
+    <div class="row"><span>Subtotal</span><span id="dSub">₹0</span></div>
+    <div class="row"><span>Delivery</span><span id="dDel">₹0</span></div>
+    <div class="row total"><span>Total</span><span id="dTot">₹0</span></div>
+    <a href="#checkout" class="btn full" id="toCheckout">Go to checkout</a>
+  </div>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="tick">✓</div>
+    <h3>Order placed!</h3>
+    <p id="modalText"></p>
+    <button class="btn" id="closeModal">Done</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
